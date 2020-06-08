@@ -1,9 +1,8 @@
-import React, {Component} from "react"
+import React from "react"
 import { withToggler} from "./HOCs/withToggler"
 
 function Menu (props){
     
-    // render() {
         return (
             <div>
                 <button onClick={props.toggle}>{props.on ? "Hide" : "Show"} Menu </button>
@@ -16,7 +15,8 @@ function Menu (props){
                 </nav>
             </div>
         ) 
-    // }
 }
+// Set the state of an individual component by sending a defaultOnValue argument 
+// into withToggler, with the regular component, and passing into Toggler as a prop.
 const SuperchargedMenuComponent = withToggler(Menu, {defaultOnValue: true});
 export default SuperchargedMenuComponent;

@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React from "react"
 import {withToggler} from "./HOCs/withToggler"
 
 function Favorite(props) {   
@@ -15,5 +15,7 @@ function Favorite(props) {
             </div>
         ) 
 }
+// Set the state of an individual component by sending a defaultOnValue argument 
+// into withToggler, with the regular component, and passing into Toggler as a prop.
 const SuperchargedFavoriteComponent = withToggler(Favorite, {defaultOnValue: false});
 export default SuperchargedFavoriteComponent;
